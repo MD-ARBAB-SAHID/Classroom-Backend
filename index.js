@@ -32,6 +32,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.send("Connected To Server");
+});
 app.use("/api/students", router);
 
 app.use("/api/subjects", subjectRouter);
